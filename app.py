@@ -69,8 +69,9 @@ def index():
     if request.method == "POST":
         # get url that the person has entered
         url = request.form['url']
-        if 'http://' not in url[:7]:
-            url = 'http://' + url
+        if 'https://' not in url[:8]:
+            url = 'https://' + url
+        print(url)
         job = q.enqueue_call(
             func=count_and_save_words, args=(url,), result_ttl=5000
         )
