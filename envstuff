@@ -1,2 +1,3 @@
 set APP_SETTINGS=config.DevelopmentConfig
 set DATABASE_URL=postgresql://postgres:postgres@localhost/flaskdb
+export DATABASE_URL="postgresql://postgres:postgres@localhost/flaskdb"
